@@ -24,7 +24,7 @@ for i in range(int(sys.argv[1])):#根据书籍页数进行截屏
 	time.sleep(1)#等待翻页稳定
 	
 ims = [m for m in os.listdir() if m.endswith('.png')]#获取目录下所有png图片的文件名
-ims.sort(key=lambda x:int(x[0:3]))#listdir居然不按文件名排序，真他妈操蛋，没办法自己排序
+ims.sort(key=lambda x:int(x[0:4]))#listdir居然不按文件名排序，真他妈操蛋，没办法自己排序
 
 (maxw, maxh) = Image.open(ims[0]).size#获取图片尺寸，用来建立pdf尺寸
 
